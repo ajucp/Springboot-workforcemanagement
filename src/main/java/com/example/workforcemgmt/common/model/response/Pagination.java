@@ -1,0 +1,13 @@
+package com.example.workforcemgmt.common.model.response;
+
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
+import lombok.Data;
+
+@Data
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+
+public class Pagination {
+    //Not Implemented for this assignment
+}
