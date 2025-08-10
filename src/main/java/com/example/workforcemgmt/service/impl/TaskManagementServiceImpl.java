@@ -132,6 +132,7 @@ public class TaskManagementServiceImpl implements TaskManagementService{
                     //featuring the fetch date
                     .filter(task -> request.getAssigneeIds().contains(task.getAssigneeId()))
                     .filter(task->task.getStatus()!=TaskStatus.CANCELLED)
+                    .filter(task -> task.getCreatedTime() != null)
                     .filter(task->
                     
                         //Task Starts in the range
