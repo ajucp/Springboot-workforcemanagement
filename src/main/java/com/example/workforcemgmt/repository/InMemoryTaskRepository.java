@@ -68,8 +68,8 @@ public class InMemoryTaskRepository implements TaskRepository {
     }
 
     @Override
-    public List<TaskManagement>findByReferenceIdAndReferenceType(Long refeerenceId,ReferenceType referenceType){
-        return taskStore.values().stream().filter(task->task.getReferenceId().equals(refeerenceId)
+    public List<TaskManagement>findByReferenceIdAndReferenceType(Long referenceId,ReferenceType referenceType){
+        return taskStore.values().stream().filter(task->task.getReferenceId().equals(referenceId)
                                         && task.getReferenceId().equals(referenceType)).collect(Collectors.toList());
     }
 
